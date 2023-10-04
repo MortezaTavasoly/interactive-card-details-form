@@ -1,0 +1,153 @@
+.form {
+  width: 500px;
+  margin: 0 150px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: hsl(278, 68%, 11%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.form .date-cvc {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: none;
+}
+.form .date-cvc input {
+  width: 100px;
+}
+.form .date-cvc label {
+  width: 300px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.form label {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+label input {
+  outline: none;
+  padding-left: 20px;
+  width: 100%;
+  height: 50px;
+  margin: 10px 20px 10px 0;
+  border-radius: 10px;
+  border: 1px solid hsl(270, 3%, 87%);
+  font-size: 18px;
+}
+label input:focus {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-radius: 10px;
+  border-image-source: linear-gradient(
+    to right,
+    hsl(249, 99%, 64%),
+    hsl(278, 94%, 30%)
+  );
+}
+label input::placeholder {
+  color: hsl(270, 3%, 87%);
+}
+.btn {
+  letter-spacing: 2px;
+  cursor: pointer;
+  width: 100%;
+  padding: 20px 0;
+  color: white;
+  border-radius: 10px;
+  background-color: hsl(278, 68%, 11%);
+}
+.form label input.error {
+  border: 1px solid hsl(0, 100%, 66%);
+}
+
+.form label .cvc {
+  width: 100%;
+}
+
+.success {
+  width: 400px;
+  margin: 0 150px;
+  font-size: 18px;
+  color: hsl(278, 68%, 11%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.success h2 {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 30px 0;
+}
+.success p {
+  color: hsl(279, 6%, 55%);
+  margin-bottom: 50px;
+}
+.error {
+  text-transform: none;
+  display: none;
+  color: hsl(0, 100%, 66%);
+}
+
+/* Responsive Design */
+
+@media (max-width: 950px) {
+  .App {
+    flex-direction: column;
+  }
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 50px;
+    background-image: url("/src/images/bg-main-mobile.png");
+  }
+  .card .img {
+    width: 328px;
+    height: 180px;
+    background-color: white;
+    margin-bottom: 30px;
+  }
+  .card .front {
+    z-index: 1;
+    background-image: url(/src/images/bg-card-front.png);
+    margin-right: 60px;
+    margin-top: 200px;
+  }
+  .card .back {
+    margin-right: -60px;
+    position: absolute;
+    background-image: url(/src/images/bg-card-back.png);
+  }
+  .form label .cvc {
+    width: 60%;
+  }
+  form .date-cvc {
+    justify-content: space-around;
+  }
+  .form {
+    padding: 0 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .success {
+    margin: 60px auto;
+  }
+}
