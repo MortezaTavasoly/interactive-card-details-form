@@ -1,2 +1,2 @@
-this project design is inspired by :
+this project is a responsive design challenge inspired by :
 https://www.frontendmentor.io/ challenges.

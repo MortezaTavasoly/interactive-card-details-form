@@ -64,6 +64,7 @@ export default function Form({
         const errorTag = parent.lastElementChild;
         errorTag.style.display = "block";
         errorTag.textContent = "Wrong format,numbers only";
+        e.target.style.borderColor = "hsl(0, 100%, 66%)";
       }
     } else {
       setNumber("");
@@ -91,6 +92,7 @@ export default function Form({
         const errorTag = parent.lastElementChild;
         errorTag.style.display = "block";
         errorTag.textContent = "Wrong format,numbers only";
+        e.target.style.borderColor = "hsl(0, 100%, 66%)";
       }
     } else {
       if (d === "mo") {
@@ -116,6 +118,7 @@ export default function Form({
         const errorTag = parent.lastElementChild;
         errorTag.style.display = "block";
         errorTag.textContent = "Wrong format,numbers only";
+        e.target.style.borderColor = "hsl(0, 100%, 66%)";
       }
     } else {
       setCvc("");
@@ -134,10 +137,17 @@ export default function Form({
       }
     } else {
       const errors = document.querySelectorAll(".error");
+      const inputTags = document.querySelectorAll("input");
+      console.log(inputTags);
       errors.forEach((error) => {
         if (error.style.display === "") {
           error.style.display = "block";
           error.textContent = "Can`t be blank";
+        }
+      });
+      inputTags.forEach((inp) => {
+        if (inp.value === "") {
+          inp.style.borderColor = "hsl(0, 100%, 66%)";
         }
       });
     }

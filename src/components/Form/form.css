@@ -111,11 +111,12 @@ label input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: none;
     background-size: cover;
+    background-image: url("/src/images/bg-main-mobile.png");
     width: 100%;
     height: 250px;
     margin-bottom: 50px;
-    background-image: url("/src/images/bg-main-mobile.png");
   }
   .card .img {
     width: 328px;
@@ -127,7 +128,7 @@ label input::placeholder {
     z-index: 1;
     background-image: url(/src/images/bg-card-front.png);
     margin-right: 60px;
-    margin-top: 200px;
+    margin-top: 240px;
   }
   .card .back {
     margin-right: -60px;
@@ -138,10 +139,12 @@ label input::placeholder {
     width: 60%;
   }
   form .date-cvc {
-    justify-content: space-around;
+    justify-content: start;
+    align-items: start;
   }
   .form {
-    padding: 0 60px;
+    width: 100%;
+    padding: 20px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -149,5 +152,14 @@ label input::placeholder {
   }
   .success {
     margin: 60px auto;
+  }
+}
+@media (max-width: 430px) {
+  .card .img {
+    width: 290px;
+    height: 160px;
+  }
+  .card .back .cvc {
+    top: 70px;
   }
 }
